@@ -1,7 +1,14 @@
 management:
+#zipkin config
+  tracing:
+      sampling:
+        probability: 1.0
+
+#actuator config
   endpoints:
     web:
       exposure:
         include: "*"
-
+  
+spring.zipkin.baseUrl: http://localhost:9411
 my.variable: "Lareb Khan's variable 2 "
